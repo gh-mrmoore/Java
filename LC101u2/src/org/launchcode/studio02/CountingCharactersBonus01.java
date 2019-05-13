@@ -1,16 +1,18 @@
-package org.launchcode.studio01;
+package org.launchcode.studio02;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.lang.*;
 
-public class CharacterCounterRefined {
-    public static void main(String[] args) {
+public class CountingCharactersBonus01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
         String myString = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan sem ut ligula scelerisque " +
                 "sollicitudin. Ut at sagittis augue. Praesent quis rhoncus justo. Aliquam erat volutpat. Donec sit " +
                 "amet suscipit metus, non lobortis massa. Vestibulum augue ex, dapibus ac suscipit vel, volutpat " +
                 "eget massa. Donec nec velit non ligula efficitur luctus.";
-
+        
+        //only count characters as lower-case values
         char[] charactersInString = myString.toCharArray();
         HashMap<Character, Integer> myCounter = new HashMap<>();
 
@@ -29,5 +31,7 @@ public class CharacterCounterRefined {
         for (Map.Entry<Character, Integer> thisChar : myCounter.entrySet()) {
             System.out.println(thisChar.getKey() + ": " + thisChar.getValue());
         }
-    }
+
+	}
+
 }
