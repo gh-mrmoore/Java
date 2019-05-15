@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us" xmlns:th="http://www.thymeleaf.org/">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:text="${title}">Unit4</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">Unit 4</div>
+    </header>
+    
+    <div class="content">
+        <!--<div class="left"></div>-->
+    
+        <div class="main">
+        	<h1>Cheese ArrayList</h1>
+        	<p th:unless="${formCheese} and ${formCheese.size()}">No cheeses added via form yet.</p>
+        	<ul>
+        		<li th:each="cheese : ${formCheese}" th:text="${cheese}"></li>
+        	</ul>
+        
+        	<h1>Cheese Form Addition</h1>
+        	<form method="post">
+        		<input type="text" id="cheeseName" name="cheeseName" /><br />
+        		<input type="submit" value="Add Cheese" />        	
+        	</form>
+        </div>
+        
+        <!--<div class="right"></div>-->
+    </div>
+
+    <footer>
+        <div class="footer">&copy; Matthew Moore, 2019</div>
+    </footer>
+</body>
+</html>
