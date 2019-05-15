@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us" xmlns:th="http://www.thymeleaf.org/">
+
+<head th:replace="fragments :: head"></head>
+<body>
+    <header>
+        <div class="header">Pre-Work</div>
+    </header>
+    
+    <div class="content">
+        <!--<div class="left"></div>-->
+    
+        <div class="main">
+        	<h1>Unit 5 Model Prep Work</h1>
+        	<ul>
+        		<li><a href="/prep">Home Page for pre-work exercises.</a></li>
+        	</ul>
+        	<hr />
+        	<h2>Capitals</h2>
+        	<p th:unless="${capitals} and ${capitals.size()}">No entries.</p>
+        	<table>
+        		<tr>
+        			<th>Capital</th>
+        			<th>State</th>
+       			</tr>
+       			<tr th:each="capital : ${capitals}">
+       				<td th:text="${animal.key}">Large/Medium/Small</td>
+       				<td th:text="${animal.value}">Elephant/Lion/Meerkat</td>
+    			</tr>
+        	</table>
+        	<hr />
+        	<form method="post">
+        		<input type="text" id="capitalName" name="capitalName" /><br />
+        		<input type="text" id="stateName" name="stateName" /><br />
+        		<input type="submit" value="Add Capital" />
+        	</form>
+        </div>
+        
+        <!--<div class="right"></div>-->
+    </div>
+
+    <footer>
+        <div class="footer">&copy; Matthew Moore, 2019</div>
+    </footer>
+</body>
+</html>
