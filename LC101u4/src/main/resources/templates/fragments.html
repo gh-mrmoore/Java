@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" th:href="@{/css/styles_main.css}"/>
+    <script type="text/javascript" th:src="@{/js/script_main.js}"></script>
+    
+    <title th:text="${title}">Unit 4</title>
+</head>
+<body>
+<nav th:fragment="nav" class="navbar navbar-default">
+	<ul>
+		<li><a href="unit4studio">Unit 4 Studio</a></li>
+		<li><a href="/unit4studio/add">Add</a></li>
+		<li><a href="/unit4studio/listdelete">List Delete</a></li>
+		<li><a href="/unit4studio/checkdelete">Check Box Delete</a></li>
+	</ul>
+</nav>
+
+</body>
+</html>

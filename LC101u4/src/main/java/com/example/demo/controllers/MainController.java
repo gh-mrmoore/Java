@@ -56,10 +56,12 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="addcheese", method = RequestMethod.POST)
-	//lower-level way to get information using HttpServletRequest from the form - doesn't integrate Spring, relies on Java
+	//lower-level way to get information using HttpServletRequest from the form
+	//Doesn't integrate Spring, relies on Java
 	/*public String processCheese(HttpServletRequest request) {
 		//model.addAttribute("title", "Cheese added");
 		String cheeseName = request.getParameter("cheeseName");*/
+	
 	//Using Spring functionality...
 	public String processCheese(@RequestParam String cheeseName) {
 		formCheese.add(cheeseName);

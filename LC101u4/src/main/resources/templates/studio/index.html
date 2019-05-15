@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+    <nav th:replace="fragments :: nav"></nav>
+
+    <h1>Buildings</h1>
+
+    <hr/>
+
+    <p>Here are the buildings in our records:</p>
+
+    <p th:unless="${buildings} and ${buildings.size()}">No buildings listed.</p>
+
+    <table>
+        <tr>
+            <th>Building Name</th>
+            <th>Building Type</th>
+        </tr>
+        <tr th:each="building : ${buildings}">
+            <td th:text="${building.key}">Key</td>
+            <td th:text="${building.value}">Value</td>
+        </tr>
+    </table>
+
+</body>
+</html>

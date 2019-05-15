@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us" xmlns:th="http://www.thymeleaf.org/">
+
+<head th:replace="fragments :: head"></head>
+<body>
+    <header>
+        <div class="header">Pre-Work</div>
+    </header>
+    
+    <div class="content">
+        <!--<div class="left"></div>-->
+    
+        <div class="main">
+        	<h1>Unit 4 Pre-Work Exercises</h1>
+        	<ul>
+        		<li><a href="/prep">Home Page for pre-work exercises.</a></li>
+        	</ul>
+        	<hr />
+        	<h2>Animals</h2>
+        	<table>
+        		<tr>
+        			<th>Size</th>
+        			<th>Animal</th>
+       			</tr>
+       			<tr th:each="animal : ${animals}">
+       				<td th:text="${animal.key}">Large/Medium/Small</td>
+       				<td th:text="${animal.value}">Elephant/Lion/Meerkat</td>
+    			</tr>
+        	</table>
+        	<hr />
+        	<form method="post">
+        		<input type="text" id="animalSize" name="animalSize" /><br />
+        		<input type="text" id="animalName" name="animalName" /><br />
+        		<input type="submit" value="Add Animal" />
+        	</form>
+        </div>
+        
+        <!--<div class="right"></div>-->
+    </div>
+
+    <footer>
+        <div class="footer">&copy; Matthew Moore, 2019</div>
+    </footer>
+</body>
+</html>

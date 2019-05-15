@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<nav th:replace="fragments :: nav"></nav>
+<h1>Delete Building</h1>
+<hr/>
+<p>Use the form below to delete one building at a time.</p>
+<form method="post">
+<select name="deleteBuilding">
+    <option th:each="building : ${buildings}" th:text="${building.key}" th:attr="value=${building.key}"></option>
+</select>
+    <input type="submit" value="Delete Building" />
+</form>
+</body>
+</html>

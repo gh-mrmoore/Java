@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us" xmlns:th="http://www.thymeleaf.org/">
 
-<head>
+<!--<head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title th:text="${title}">Unit4</title>
-</head>
-
+</head>-->
+<head th:replace="fragments :: head"></head>
 <body>
     <header>
         <div class="header">Unit 4</div>
@@ -24,8 +24,15 @@
         	</ul>
         	<hr />
         	<h1>Unit 4 Pre-Work Exercises</h1>
+        	<ul>
+        		<li><a href="/prep">Home Page for pre-work exercises.</a></li>
+        	</ul>
+        	
         	<hr />
-        	<h1>Unit 4 Studio Work</h1> 
+        	<h1>Unit 4 Studio Work</h1>
+        	<ul>
+        		<li><a href="/unit4studio">Unit 4 Studio</a></li>
+        	</ul>
         </div>
         
         <!--<div class="right">

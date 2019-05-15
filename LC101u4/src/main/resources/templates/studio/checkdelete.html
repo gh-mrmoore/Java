@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<nav th:replace="fragments :: nav"></nav>
+<h1>...</h1>
+<hr/>
+<p>...</p>
+
+<form method="post">
+    <table>
+        <tr>
+            <th>Building Name</th>
+            <th>Building Type</th>
+            <th>Delete</th>
+        </tr>
+        <tr th:each="building : ${buildings}">
+            <td th:text="${building.key}">Key</td>
+            <td th:text="${building.value}">Value</td>
+            <td><input name="test" type="checkbox" th:attr="value=${building.key}" /></td>
+        </tr>
+    </table>
+    <input type="submit" value="Delete Buildings" />
+</form>
+
+</body>
+</html>

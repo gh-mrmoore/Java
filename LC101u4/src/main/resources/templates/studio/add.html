@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+    <nav th:replace="fragments :: nav"></nav>
+    <h1>Add Building</h1>
+    <hr/>
+    <p>Use this form to add a new building.</p>
+
+    <form method="post">
+        <label for="buildingName">Add Building!</label><br />
+        <input type="text" name="buildingName" id="buildingName" />
+
+        <label for="buildingType"></label><br />
+        <select name="buildingType" id="buildingType">
+            <option value="Tudor">Tudor</option>
+            <option value="Craftsman">Craftsman</option>
+            <option value="Ranch">Ranch</option>
+            <option value="Mid-Century Modern">Mid-Century Modern</option>
+            <option value="Split-Level">Split Level</option>
+        </select>
+        <input type="submit" value="Add Building" />
+    </form>
+</body>
+</html>
