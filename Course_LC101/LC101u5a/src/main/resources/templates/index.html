@@ -20,18 +20,20 @@
         	<p th:unless="${capitals} and ${capitals.size()}">No entries.</p>
         	<table>
         		<tr>
+        			<th>ID</th>
         			<th>Capital</th>
         			<th>State</th>
        			</tr>
        			<tr th:each="capital : ${capitals}">
-       				<td th:text="${animal.key}">Large/Medium/Small</td>
-       				<td th:text="${animal.value}">Elephant/Lion/Meerkat</td>
+       				<td th:text="${capital.capitalID}">ID number</td>
+       				<td th:text="${capital.capitalName}">City</td>
+       				<td th:text="${capital.stateName}">State</td>
     			</tr>
         	</table>
         	<hr />
         	<form method="post">
-        		<input type="text" id="capitalName" name="capitalName" /><br />
-        		<input type="text" id="stateName" name="stateName" /><br />
+        		<p>Capital Name: <input type="text" id="capitalName" name="capitalName" /><br />
+        		State: <input type="text" id="stateName" name="stateName" /><br />
         		<input type="submit" value="Add Capital" />
         	</form>
         </div>

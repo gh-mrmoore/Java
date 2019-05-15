@@ -24,8 +24,12 @@ public class MainController {
 	}
 	
 	@RequestMapping(value = "", method = RequestMethod.POST)
+	//get the input from the addition form
 	public String index(@RequestParam String capitalName, @RequestParam String stateName) {
-		//get the input from the addition form
+		//create the new state capital object
+		StateCapitals capital = new StateCapitals(capitalName, stateName);
+		System.out.println(capital);
+		capitals.add(capital);
 		
 		//re-direct back to the home page
 		return "redirect:";
